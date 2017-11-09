@@ -4,18 +4,14 @@ class Program
 {
     static void Main()
     {
-        bool a = true;
-        bool b = false;
-        Console.WriteLine(a && b);
-        Console.WriteLine(a || b);
-        Console.WriteLine(!b);
-        Console.WriteLine(b || true);
-        Console.WriteLine((9 > 7) ^ (a == b));
-        Console.WriteLine((b != a) || (a == b));
-        Console.WriteLine((b != a) && (a == b));
-        Console.WriteLine((!a) && (!b));
-        Console.WriteLine((!a) || (!b));
+        byte a = 3;
+        byte b = 5;
 
+        Console.WriteLine(a | b);
+        Console.WriteLine(a & b);
+        Console.WriteLine(a ^ b);
+        Console.WriteLine(~a & b);
+        Console.WriteLine("{0}", Convert.ToString(a << 1, 2).PadLeft(8, '0'));
     }
 
 
