@@ -6,25 +6,30 @@ class Program
     {
         int a;
         int b;
-        Console.Write("Input Number:");
-            a = Console.Read();
+        int c;
+   
+        Console.Write("Input First Number:");
+        a = Convert.ToInt32( Console.ReadLine());
+        Console.Write("Input Last Number:");
+        b = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Divisible number 7:");
 
-        b = mod(a);
-        
-        if (b == 1)
+        for (int i = a; i <= b; i++)   
         {
-            Console.WriteLine("Odd number");
-        } 
-        else
-        {
-            Console.WriteLine("even number");
+            c = mod(i);
+
+            if (c == 0)
+            {
+                Console.WriteLine(i);
+            }
+            
         }
         Console.ReadKey();
     }
 
-    static int mod(int a)
+    static int mod(int x)
     {
-        return a%2;
+        return x%7;
     }
 
 }
